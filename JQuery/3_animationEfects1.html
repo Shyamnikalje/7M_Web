@@ -1,0 +1,44 @@
+<script src="jquery-1.10.2.js"></script>
+<script src="jquery-ui.js"></script>
+<meta http-equiv="refresh" content="5" />
+<script>
+  $(document).ready(function() {
+    $("#drp1").change(function() {
+      var x = $(this)
+        .children("option:selected")
+        .val();
+      console.log("x", x);
+      $("#img1").show(x, 1000);
+    });
+  });
+
+  // function funct1(val) {
+  //   $("#img1").show(val, 2000);
+  // }
+  // -----------------------------------------------------------
+  // function funct1(val) {
+  //   $(document).ready(function() {
+  //     $("drp1").change(function() {
+  //       $("#img1").show(val, 2000);
+  //     });
+  //   });
+  // }
+</script>
+
+<!-- <select id="drp1" onchange="funct1(this.value)"> -->
+<select id="drp1">
+  <option>blind </option>
+  <option>exlpode </option>
+  <option>bounce </option>
+  <option>clip </option>
+  <option>drop </option>
+  <option>fade </option>
+  <option>highlight </option>
+  <option>puff </option>
+  <option>pulsate </option>
+  <option>scale </option>
+  <option>shake </option>
+  <option>size </option>
+  <option>slide </option> </select
+><br />
+<img src="../img/flower2.jpg" width="200px" id="img1" style="display:none" />
