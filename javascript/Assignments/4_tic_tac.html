@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .table {
+        position: absolute;
+        top: 30%;
+        left: 35%;
+        border: 1px solid black;
+        width: 300px;
+        height: 300px;
+        padding: 2px;
+        text-align: center;
+        align-content: center;
+      }
+      td {
+        background-color: black;
+        color: blanchedalmond;
+        padding: 2px;
+        text-align: center;
+
+        /* border-bottom: 1px solid black; */
+        /* border-right: 1px solid black; */
+      }
+
+      .container {
+        /* position: relative; */
+        position: absolute;
+        top: 10%;
+        left: 7%;
+        /* display: inline-block; */
+        align-content: center;
+        justify-content: center;
+        width: 85%;
+        height: 80vh;
+        border: 2px solid grey;
+        border-radius: 5px;
+      }
+
+      .textInfo {
+        position: absolute;
+        top: 10%;
+        left: 35%;
+        width: 300px;
+        height: 50px;
+
+        border: 1px solid greenyellow;
+        border-radius: 5px;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="mainDiv">
+      <table class="table">
+        <tr class="row" id="row1">
+          <td class="data" id="data11"></td>
+          <td class="data" id="data12"></td>
+          <td class="data" id="data13"></td>
+        </tr>
+        <tr class="row" id="row2">
+          <td class="data" id="data21"></td>
+          <td class="data" id="data22"></td>
+          <td class="data" id="data23"></td>
+        </tr>
+        <tr class="row" id="row3">
+          <td class="data" id="data31"></td>
+          <td class="data" id="data32"></td>
+          <td class="data" id="data33"></td>
+        </tr>
+      </table>
+
+      <input
+        type="button"
+        value="Start"
+        style="position: absolute; top: 50%; left: 15%; width: 100px; height: 50px;"
+      />
+
+      <div class="textInfo" id="textInfo"></div>
+    </div>
+
+    <script></script>
+  </body>
+</html>

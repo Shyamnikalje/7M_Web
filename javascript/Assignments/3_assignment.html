@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="cls" id="pTag1">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </p>
+    <p class="cls" id="pTag2">
+      Commodi illum asperiores iure reprehenderit esse qui et.
+    </p>
+    <p class="cls" id="pTag3">
+      Voluptates veniam earum illum nostrum, eos in fuga?
+    </p>
+    <p class="cls" id="pTag4">
+      Consequuntur, eveniet laborum obcaecati culpa pariatur eum quos?
+    </p>
+    <p class="cls" id="pTag5">
+      Qui sapiente fugit unde omnis eum laborum molestias!
+    </p>
+    <div class="div" id="div1"></div>
+    <script>
+      var a = document.getElementById("pTag2");
+      console.log("TCL: a", a);
+
+      var allPtag = document.getElementsByTagName("p");
+      console.log("TCL: allPtag", allPtag);
+
+      var lab = document.createElement("label");
+      console.log("TCL: c", lab);
+      lab.innerHTML = "Hello...";
+
+      var button = document.createElement("button");
+      button.value = "Click";
+
+      document.getElementById("div1").appendChild(lab);
+
+      var d = document.getElementById("div1").appendChild(button);
+      console.log("TCL: d ", d);
+    </script>
+  </body>
+</html>

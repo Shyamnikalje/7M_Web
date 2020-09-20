@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #mainDiv {
+        position: absolute;
+        left: 6%;
+        width: 1200px;
+        height: 650px;
+        background-image: url("../../img/jawa5.jpg");
+        /* background-size: 100% 100%; */
+        background-attachment: fixed;
+        background-position: 0px 0px;
+        /* border: solid 2px blue; */
+      }
+      .slice {
+        display: inline-block;
+        border: 2px solid black;
+        width: 235px;
+        height: 325px;
+        box-shadow: black 5px 5px 20px;
+        z-index: 1;
+      }
+      #div1 {
+        background-image: url("../../img/jawa5.jpg");
+        position: absolute;
+        left: 100px;
+        top: 30%;
+
+        background-position: -182px -208px;
+      }
+      #div2 {
+        background-image: url("../../img/jawa5.jpg");
+        /* height: 400px; */
+        position: absolute;
+        left: 350px;
+        top: 10%;
+        /* border: solid 2px silver; */
+        background-position: -435px -75px;
+      }
+      #div3 {
+        background-image: url("../../img/jawa5.jpg");
+        position: absolute;
+        height: 300px;
+        right: 360px;
+        top: 50%;
+        /* border: solid 2px silver; */
+        background-position: -687px -337px;
+      }
+      #div4 {
+        background-image: url("../../img/jawa5.jpg");
+        position: absolute;
+        /* height: 400px; */
+        right: 100px;
+        top: 10%;
+        /* border: solid 2px silver; */
+        background-position: -947px -78px;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <div id="mainDiv">
+      <div class="slice" id="div1"></div>
+      <div class="slice" id="div2"></div>
+      <div class="slice" id="div3"></div>
+      <div class="slice" id="div4"></div>
+    </div>
+  </body>
+</html>
