@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" name="form1">
+      <label>Fisrt Name :</label>
+      <input type="text" id="fName" placeholder="First name" />
+      <br />
+      <label>Last Name :</label>
+      <input type="text" id="lName" placeholder="Last name" 2 />
+      <br />
+      <label>D.O.B :</label>
+      <input type="date" id="dob" placeholder="D.O.B" />
+      <br />
+      <label>Email Id :</label>
+      <input type="email" id="email" placeholder="email" />
+      <br />
+      <label>Contact No :</label>
+      <input
+        type="text"
+        id="contact"
+        placeholder="Contact"
+        minlength="10"
+        maxlength="10"
+      />
+      <br />
+      <label>Gender :</label>
+      <input type="radio" id="genderM" name="Gender" value="Male" />Male
+      <input type="radio" id="genderF" name="Gender" value="Female" />Female
+      <input type="radio" id="genderO" name="Gender" value="Others" />Others
+      <br />
+      <label>Color :</label>
+      <input type="color" id="clr1" value="#ffffff" /><br />
+
+      <label>Education :</label>
+      <input
+        type="checkbox"
+        class="check1"
+        name="edu"
+        id="UG"
+        value="Under_Graduate"
+      />Under Graduate
+      <input
+        type="checkbox"
+        class="check1"
+        name="edu"
+        id="G"
+        value="Graduate"
+      />Graduate
+      <input
+        type="checkbox"
+        class="check1"
+        name="edu"
+        id="PG"
+        value="Post_Graduate"
+      />Post Graduate
+      <br />
+
+      <label for="">Select Course:</label>
+      <select name="Select" id="Sel1">
+        <option value="Java">Java</option>
+        <option value="Python">Python</option>
+        <option value="Web Dev">Web Dev</option>
+        <option value="Data Science">Data Science</option>
+      </select>
+      <br />
+      <input type="button" value="ShowData" onclick="showData()" />
+    </form>
+
+    <table border="grey" align="center">
+      <th colspan="2">
+        User Data
+      </th>
+      <tr>
+        <td id="td1">First Name :</td>
+        <td id="td2"></td>
+      </tr>
+      <tr>
+        <td id="td3">Last Name :</td>
+        <td id="td4"></td>
+      </tr>
+      <tr>
+        <td id="td31">Date of Birth :</td>
+        <td id="td41"></td>
+      </tr>
+      <tr>
+        <td id="td5">E-mail :</td>
+        <td id="td6"></td>
+      </tr>
+      <tr>
+        <td id="td7">Contact No:</td>
+        <td id="td8"></td>
+      </tr>
+      <tr>
+        <td id="td9">Gender</td>
+        <td id="td10"></td>
+      </tr>
+      <tr>
+        <td id="td11">Color</td>
+        <td id="td12"></td>
+      </tr>
+      <tr>
+        <td id="td13">Education</td>
+        <td id="td14"></td>
+      </tr>
+      <tr>
+        <td id="td15">Course</td>
+        <td id="td16"></td>
+      </tr>
+    </table>
+
+    <script>
+      document.getElementById("fName").required = true; //set required
+      document.getElementById("lName").required = true;
+
+      function showData() {
+        var fname = document.getElementById("fName").value;
+
+        document.getElementById("td2").innerHTML = fname;
+
+        var lname = document.getElementById("lName").value;
+        document.getElementById("td4").innerHTML = lname;
+
+        var dob = document.getElementById("dob").value;
+        document.getElementById("td41").innerHTML = dob;
+
+        var email = document.getElementById("email").value;
+        document.getElementById("td6").innerHTML = email;
+
+        var contact = document.getElementById("contact").value;
+        document.getElementById("td8").innerHTML = contact;
+
+        var GenderVal = document.form1.Gender.value; //import selected radio button value using name attribute
+        // var Gender = document.getElementById("Gender").value;
+        console.log("TCL: showData -> Gender", GenderVal);
+        document.getElementById("td10").innerHTML = GenderVal;
+
+        var color = document.getElementById("clr1").value;
+        document.getElementById("td12").innerHTML = color;
+
+        var Edu1 = document.getElementsByName("edu");
+        for (var i in Edu1) {
+          if (Edu1[i].checked == true)
+            document.getElementById("td14").innerHTML +=
+              " " + Edu1[i].value + " ";
+        }
+        console.log("TCL: showData -> Edu ", Edu1);
+
+        // var Edu2 = document.getElementById("G").value;
+        // var Edu3 = document.getElementById("PG").value;
+
+        // var E1 = document.getElementById("UG").value;
+        // console.log("TCL: showData -> E1", E1);
+
+        // document.getElementById("td14").innerHTML =
+        //   Edu1 + " " + Edu2 + " " + Edu3;
+
+        var Course = document.getElementById("Sel1").value;
+        document.getElementById("td16").innerHTML = Course;
+        console.log("TCL: showData -> Course", Course);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #body {
+        background-image: linear-gradient(to bottom right, #00f0ff, #ff00ff);
+        height: 700px;
+      }
+    </style>
+  </head>
+
+  <body id="body">
+    <input type="color" id="color1" value="#00f0ff" />
+    <input type="color" id="color2" value="#ff00ff" />
+    <script>
+      //   var x = document.getElementById("body");
+      var c1 = document.getElementById("color1");
+      c1.addEventListener("change", changeColor);
+      var c2 = document.getElementById("color2");
+      c2.addEventListener("change", changeColor);
+
+      function changeColor() {
+        var clr1 = document.getElementById("color1").value;
+        var clr2 = document.getElementById("color2").value;
+        console.log("TCL: clr2", clr2);
+        document.getElementById("body").style.backgroundImage =
+          "linear-gradient(to bottom right," + clr1 + "," + clr2 + ")";
+      }
+    </script>
+  </body>
+</html>

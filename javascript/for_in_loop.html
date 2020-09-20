@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var data = {
+                name: "Alok" ,
+                age: 25 ,
+                city: "pune",
+                marks:"80%" ,
+                subjects :["Physics","Bio","Chemistry"]
+            };
+            // for (var i in data) {
+			// 	console.log("Value of : i", i);
+			// 	document.write("<br>");
+			// 	document.write(data[i]);
+            
+            //   console.log(Array.isArray(data[i]))
+            //     if(Array.isArray(data[i]))
+            //       {
+            //         for(var k of data[i])
+            //         {
+            //             document.write("<br>");
+            //             document.write("subjects:");
+            //             document.write(+k);
+            //         }
+            //       }
+            
+                for (var x in data) 
+                {
+				console.log("Value of : isArray", Array.isArray(data[x]));
+				if (Array.isArray(data[x])) 
+                {
+					for (var p of data[x]) 
+                    {
+					document.write("<br> subjects : " + p);
+					}
+				}       
+                else 
+                {
+					document.write("<br>" + data[x]);
+				}
+			}
+        
+    </script>
+</body>
+</html>

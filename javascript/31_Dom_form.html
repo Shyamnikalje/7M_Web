@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Click the button to create a FORM and an INPUT element.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        var x = document.createElement("FORM");
+        x.setAttribute("id", "myForm");
+        x.setAttribute("");
+        document.body.appendChild(x);
+
+        // var username = document.createElement("LABEL");
+        // username.setAttribute("innerHTML", "lab1");
+        // document.getElementById("lab1").innerHTML = "username";
+        // username.setAttribute("value", "Username :");
+        // var text = "Username";
+        // document.getElementById("myform").appendChild(username);
+
+        var y = document.createElement("INPUT");
+        y.setAttribute("type", "text");
+        y.setAttribute("placeholder", "username");
+        document.getElementById("myForm").appendChild(y);
+
+        var z = document.createElement("INPUT");
+        z.setAttribute("type", "password");
+        z.setAttribute("placeholder", "password");
+        document.getElementById("myForm").appendChild(z);
+
+        var a = document.createElement("INPUT");
+        a.setAttribute("type", "submit");
+        document.getElementById("myForm").appendChild(a);
+      }
+    </script>
+  </body>
+</html>

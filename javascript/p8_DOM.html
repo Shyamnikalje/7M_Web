@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        display: inline-block;
+        box-shadow: aqua;
+        border: none;
+        margin: 2px;
+        padding: 2px;
+        background-color: grey;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      id="img1"
+      src="../img/bg14.jpg"
+      alt=""
+      width="800px"
+      onmouseover="changeImg()"
+    />
+    <ul>
+      <li>Lorem.</li>
+      <li>Quod!</li>
+      <li>Adipisci!</li>
+      <li>Officia.</li>
+      <li>Maiores?</li>
+    </ul>
+
+    <script>
+      function changeImg() {
+        var temp = document.getElementById("img1");
+        console.log("TCL: temp", temp);
+        // temp.width = 400;
+        temp.src = "../img/bg15.jpg";
+        temp.alt = "text....";
+        temp.id = "abcd";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write("<hr>");
+      //   ----------------------------------normal function-----------------------------------------------
+      function sayHello() {
+        document.write("hello there.....");
+      }
+      sayHello();
+      document.write("<hr>");
+      //   -------------------------------------------------------------------------------------
+      function sayHi(name) {
+        document.write("Hi..! " + name + "");
+      }
+      sayHi("sai");
+      document.write("<hr>");
+      // --------------------------------anno funct------------------------------------------
+      var text = function() {
+        document.write("hey.........!");
+      };
+      text();
+      document.write("<hr>");
+      //   ---------------------------------arrow function------------------------------------------
+      var arr = (name, age) =>
+        document.write("hello.." + name + " your age " + age);
+      arr("Alex", 25);
+      document.write("<hr>");
+
+      //   -----------------------------------nested function---------------------------------------------
+      function mainFun() {
+        return function() {
+          document.write("Nested function....");
+        };
+      }
+      mainFun()();
+      document.write("<hr>");
+
+      //   ----------------------------------------------iife function----------------------------------------
+      (function(name) {
+        document.write("welcome..." + name);
+      })("Ram");
+      document.write("<hr>");
+    </script>
+  </body>
+</html>

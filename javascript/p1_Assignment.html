@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Sdata={
+            Name:"Rushi",
+            Age: 20,
+            Subject:["Phy","Chem","Maths","Bio"],
+            College:"Fergusson College",
+            Marks:"90%",
+            Address:{
+                Society:"Swastik hou. soc C11",
+                House_no:602,
+                village:"chikhali",
+                city:"Pune"
+                }
+        }
+        for(var a in Sdata)
+        {
+            console.log(Array.isArray(Sdata[a])); //Array.isArray is method used to find out element is an Array
+            if(Array.isArray(Sdata[a]) == true)
+            {
+                // document.write("<br>");
+                for(var b of Sdata[a])
+                {
+                    console.log(b);
+                    document.write("<br>Array values:" + b);
+                    
+                }
+                
+                
+            } 
+            else if(typeof Sdata[a] == "object")  //typeof is used to find type of element
+            {
+                for(var j in Sdata[a])
+                {
+                    var x = Sdata[a];
+                    console.log(typeof Sdata[a]);
+                console.log("<br>values of address object:", j );
+                document.write("<br>" + x[j]);
+                }
+            }
+            else
+            {
+                document.write("<br>" + Sdata[a]);
+                
+            }
+        }
+        
+    </script>
+</body>
+</html>

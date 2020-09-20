@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .button {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        font-size: 25px;
+        margin: 2px;
+        background-color: rgb(75, 61, 66);
+        border: none;
+        color: white;
+      }
+
+      .viewbox {
+        width: 210px;
+        height: 40px;
+        font-size: 25px;
+        padding: 5px;
+        margin: 2px;
+        border-radius: 5px;
+        border: 1px solid;
+        color: rgb(75, 61, 66);
+      }
+      .main {
+        position: absolute;
+        top: 35%;
+        left: 45%;
+        transform: translateX(-25%) translateY(-40%);
+      }
+
+      .bg {
+        background: linear-gradient(
+          to right,
+          rgb(25, 155, 144),
+          rgb(199, 58, 164)
+        );
+        height: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="main">
+      <form name="form">
+        <input class="viewbox" name="viewbox" /><br />
+        <table>
+          <tr>
+            <td>
+              <input
+                class="button"
+                type="button"
+                value="C"
+                onclick="clean(),playbtnSound('C')"
+              />
+            </td>
+            <td>
+              <input
+                class="button"
+                type="button"
+                value="<"
+                onclick="back(),playbtnSound('<')"
+              />
+            </td>
+            <td>
+              <input
+                class="button"
+                type="button"
+                value="/"
+                onclick="insert('/'),playbtnSound('/')"
+              />
+            </td>
+            <td>
+              <input
+                class="button"
+                type="button"
+                value="*"
+                onclick="insert('*'),playbtnSound('*')"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                class="button"
+                type="button"
+                value="7"
+                onclick="insert(7),playbtnSound(7)"
+              />
+            </td>
+            <td>
+              <input
+                class="button"
+                type="button"
+                value="8"
+                onclick="insert(8),playbtnSound(8)"
+              />
+            </td>
+            <td>
+              <input
+                class="button"
+                type="button"
+                value="9"
+                onclick="insert(9),playbtnSound(9)"
+              />
+            </td>
+            <td>
+              <input
+                class="button"
+                type="button"
+                value="-"
+                onclick="insert('-'),playbtnSound('-')"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                class="button"
+                type="button"
+                value="4"
+                onclick="insert(4),playbtnSound(4)"
+              />
+            </td>
+            <td>
+              <input
+                class="button"
+                type="button"
+                value="5"
+                onclick="insert(5),playbtnSound(5)"
+              />
+            </td>
+            <td>
+              <input
+                class="button"
+                type="button"
+                value="6"
+                onclick="insert(6),playbtnSound(6)"
+              />
+            </td>
+            <td>
+              <input
+                class="button"
+                type="button"
+                value="+"
+                onclick="insert('+'),playbtnSound('+')"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                class="button"
+                type="button"
+                value="1"
+                onclick="insert(1),playbtnSound(1)"
+              />
+            </td>
+            <td>
+              <input
+                class="button"
+                type="button"
+                value="2"
+                onclick="insert(2),playbtnSound(2)"
+              />
+            </td>
+            <td>
+              <input
+                class="button"
+                type="button"
+                value="3"
+                onclick="insert(3),playbtnSound(3)"
+              />
+            </td>
+            <td rowspan="2">
+              <input
+                class="button"
+                type="button"
+                style="height:107px"
+                value="="
+                onclick="equal(),playbtnSound('='),finalOutput()"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input
+                class="button"
+                type="button"
+                style="width: 107px"
+                value="0"
+                onclick="insert(0),playbtnSound(0)"
+              />
+            </td>
+            <td>
+              <input
+                class="button"
+                type="button"
+                value="."
+                onclick="insert('.')"
+              />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <script>
+      function insert(num) {
+        document.form.viewbox.value = document.form.viewbox.value + num;
+      }
+
+      function equal() {
+        var exp = document.form.viewbox.value;
+        if (exp) {
+          document.form.viewbox.value = eval(exp);
+          // playbtnSound("=");
+          //   setTimeout(3000, finalOutput());
+          //   finalOutput();
+        }
+      }
+
+      function clean() {
+        document.form.viewbox.value = "";
+      }
+
+      function back() {
+        var exp = document.form.viewbox.value;
+        document.form.viewbox.value = exp.substring(0, exp.length - 1);
+      }
+
+      //audiofiles
+      var zero = new Audio();
+      zero.src = "../audios/numbers/0.wav";
+
+      var one = new Audio();
+      one.src = "../audios/numbers/1.wav";
+
+      var two = new Audio();
+      two.src = "../audios/numbers/2.wav";
+
+      var three = new Audio();
+      three.src = "../audios/numbers/3.wav";
+
+      var four = new Audio();
+      four.src = "../audios/numbers/4.wav";
+
+      var five = new Audio();
+      five.src = "../audios/numbers/5.wav";
+
+      var six = new Audio();
+      six.src = "../audios/numbers/6.wav";
+
+      var seven = new Audio();
+      seven.src = "../audios/numbers/7.wav";
+
+      var eight = new Audio();
+      eight.src = "../audios/numbers/8.wav";
+
+      var nine = new Audio();
+      nine.src = "../audios/numbers/9.wav";
+
+      var plus = new Audio();
+      plus.src = "../audios/maths/plus.wav";
+
+      var sub = new Audio();
+      sub.src = "../audios/maths/minus.wav";
+
+      var divide = new Audio();
+      divide.src = "../audios/maths/divided_by.wav";
+
+      var mult = new Audio();
+      mult.src = "../audios/maths/multiplied_by.wav";
+
+      var point = new Audio();
+      point.src = "../audios/maths/point.wav";
+
+      var clr = new Audio();
+      clr.src = "../audios/clr.ogg";
+
+      var cut = new Audio();
+      cut.src = "../audios/cut.mp3";
+
+      var Equals = new Audio();
+      Equals.src = "../audios/maths/equalsto.mp3";
+
+      function playbtnSound(val) {
+        if (val == 0) zero.play();
+        
+        setTimeout(2000);
+
+        if (val == 1) one.play();
+        setTimeout(2000);
+
+        if (val == 2) two.play();
+        setTimeout(2000);
+
+        if (val == 3) three.play();
+        setTimeout(2000);
+
+        if (val == 4) four.play();
+        setTimeout(2000);
+
+        if (val == 5) five.play();
+        setTimeout(2000);
+
+        if (val == 6) six.play();
+        setTimeout(1000);
+
+        if (val == 7) seven.play();
+        setTimeout(1000);
+
+        if (val == 8) eight.play();
+        setTimeout(1000);
+
+        if (val == 9) nine.play();
+        setTimeout(1000);
+
+        if (val == ".") point.play();
+        setTimeout(1000);
+
+        if (val == "+") plus.play();
+        setTimeout(1000);
+
+        if (val == "-") sub.play();
+        setTimeout(1000);
+
+        if (val == "*") mult.play();
+        setTimeout(1000);
+
+        if (val == "/") divide.play();
+        setTimeout(1000);
+
+        if (val == "C") clr.play();
+        setTimeout(1000);
+
+        if (val == "<") cut.play();
+        setTimeout(1000);
+
+        if (val == "=") {
+          console.trace();
+          Equals.play();
+          setTimeout(finalOutput, 2000);
+
+          //   finalOutput()
+        }
+      }
+
+      function finalOutput() {
+        var output = document.form.viewbox.value;
+        console.clear();
+        console.table("TCL: output", output);
+        var i = output.length;
+        console.log("lenght of output", i);
+        for (var k = 0; k < output.length; k++) {
+          playbtnSound(output[k]);
+          // setTimeout(function() {
+          //   playbtnSound(output[k]);
+          // }, 1000);
+          //   playbtnSound(output[k]);
+          console.table("TCL: output[i]", output[k]);
+          console.table("TCL: value in i :", k);
+        }
+
+        // return output[i];
+      }
+    </script>
+  </body>
+</html>
