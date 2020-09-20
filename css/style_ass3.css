@@ -1,0 +1,10 @@
+button{
+    display: inline;
+    background-color: rgb(230, 223, 223);
+    width: 200px ;
+    border-radius: 10px;
+    position: sticky;
+    
+    padding: 5px;
+    margin: 10px;
+}

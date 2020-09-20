@@ -1,0 +1,179 @@
+html
+{
+scroll-behavior: smooth;
+}
+p 
+{
+color: cornflowerblue !important;
+    
+}
+
+.body-background
+{
+    background-image: url(../img/bg6.jpg);
+    background-attachment: fixed;
+}
+
+div
+{
+    border: 1px solid rgba(64, 230, 194, 0.979);
+    height:400px ;
+    padding: 25px;
+
+}
+
+#div1,#div3,#div5,#div7,#div9
+{
+background-color: rgb(196, 114, 250);
+}
+
+
+#div1,#div10
+{
+
+    height: 100px;
+    background-image: url(../img/bgtxt6.jpg);
+    background-attachment: fixed;
+    border-radius: 10px;
+    
+}
+
+#div3
+{
+    background-image: url(../img/bg8.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+}
+#div5
+{
+    background-image: url(../img/bg18.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+#div7
+{
+    background-image: url(../img/bg25.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+#div9
+{
+    background-image: url(../img/bg17.jpg) ; height: 400px;
+    background-size: 100%;
+    background-attachment: fixed;
+
+}
+
+
+#logo
+{
+    position: fixed;
+    align-items: flex-start;
+    border-radius: 50%;
+    height: 100px;
+    border: 1px solid rgba(64, 230, 194, 0.979);
+    
+}
+
+h1{
+    color: indigo;
+}
+
+.parallex_p1
+{
+    color: white !important;
+}
+
+/*position*/
+
+.poz-fix
+{
+position: fixed;
+top:300px;
+left:40%;
+opacity: 0.4;
+}
+
+/*menubar*/
+#menu{
+    position:sticky;
+    top: 50px;
+    margin:10px ;
+    left: 35%;
+}
+#menu li {
+    color: grey;
+    background-color: #ffffff;
+	display: inline-block;
+	/* border: 1px solid silver; */
+	padding: 5px;
+	margin: 10px;
+	box-shadow: 0px 0px 6px ;
+	border-radius: 5px;
+}
+
+#div1
+{
+    position: sticky;
+    top: 0px;
+    right: 35%;
+    z-index: 1; ;
+}
+
+#indiv1
+{
+    height: 200px;
+    position: absolute;
+    top: 260px;
+    right: 5%;
+    overflow: auto;
+    padding: 10px;
+    display: block;
+    padding-top: 30px !important;
+}
+.cls2
+{
+    border: 1px solid gainsboro !important;
+    border-radius: 5%;
+}
+
+#loginform
+{
+    display: inline-block;
+    padding: 20px;
+}
+label
+{
+    color: whitesmoke;
+}
+
+#inputbox
+{
+    display: inline-block;
+    box-shadow: 2px rgba(0, 238, 255, 0.918);
+    border-radius: 5%;
+    padding: 5px;
+    margin: 5px;
+}
+
+#div2,#div4,#div6,#div8
+{
+    border: 00px;
+}
+
+/*using span*/
+span
+{
+    border: solid 1px grey;
+    position: relative;
+    margin: 10px;
+    
+    display: inline-block;
+}
+.spanimage
+{
+    height: 250px;
+    width: 250px;
+}
