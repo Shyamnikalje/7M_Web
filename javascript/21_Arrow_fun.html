@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var wlcm= () => document.write("WELCOME...")   //arrow function
+
+        function result(sub1,sub2,sub3,sub4,sub5)      //function with parameters
+        {
+            wlcm();
+            var total= sub1+sub2+sub3+sub4+sub5;
+            document.write("<br>sub1:"+sub1);
+            document.write("<br>sub2:"+sub2);
+            document.write("<br>sub3:"+sub3);
+            document.write("<br>sub4:"+sub4);
+            document.write("<br>sub5:"+sub5);
+            document.write("<br>Total::"+total);
+            
+
+            var percent=(total/500)*100 ;
+            document.write("<br>percentage::"+percent+"%");
+            document.write("<hr>");
+            return percent;
+        }
+        result(40,50,67,78,75);
+        result(80,70,74,78,90);
+        result(48,40,60,68,50);
+
+        /* IIFE function  */
+
+			(function() {
+				document.write("Hello Alex...!<br>");
+			})();
+
+        // inner function
+        function temp()
+        {
+            return function()
+            {
+                document.write("we are in inner function...");
+            }
+        }
+
+        temp()();
+        
+    </script>
+</body>
+</html>

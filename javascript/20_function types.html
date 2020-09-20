@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // function with parameters
+        function sayhello(name){
+            document.write("<br>hello "+name);
+        }
+        sayhello("sai");
+        sayhello("samarth");
+
+        // function with return type
+        /*Annonymous function*/
+
+        var Result=function (num1,num2,num3)
+        {
+            return num1+num2+num3 ;
+        }
+        var res1=Result(50,50,90);
+        document.write("<br><b>Res1:"+res1+"</b>");
+
+        var res2=Result(50,70,60);
+        document.write("<br><i>Res1:"+ res2 +"</i>");
+
+        var res3=Result(80,90,60);
+        document.write("<br><mark>Res1:"+ res3 +"</mark>");
+
+        
+    </script>
+</body>
+</html>

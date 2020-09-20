@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- inline js -->
+    <p onclick="alert('alert...')">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Cupiditate dolores voluptate deleniti repellendus minus autem quisquam quo deserunt 
+        ratione veniam?</p>
+
+        <h1 onmouseover="document.write('hi....')" >welcome</h1>
+        <h2 ondblclick="document.write('double clicked..')" >javascript</h2>
+        <hr>
+<!-- internal js -->
+        <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores animi 
+            dignissimos tempora ratione debitis aliquid, eligendi iure alias exercitationem quasi minus. 
+            Obcaecati officia quisquam perspiciatis odit nihil. Alias, doloremque et.</p>
+
+            <h1 id = "h1">Heading 1...</h1>
+
+            <script> 
+            document.getElementById('p1').align="center";
+            document.getElementById('p1').bgcolor= "grey";
+            // document.getElementById('p1').onmouseover="document.Write('hello...')";
+            // var clickevent = onclick<p1>
+            </script>
+</body>
+</html>

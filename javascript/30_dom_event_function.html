@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="../img/bg3.jpg" alt="" id="bigImg" width="600px" height="400px" />
+    <br />
+    <img
+      src="../img/bg4.jpg"
+      alt=""
+      id="img1"
+      width="150"
+      height="100px"
+      onmouseover="changeImg(this)"
+    />
+    <img
+      src="../img/bg5.jpg"
+      alt=""
+      id="img2"
+      width="150"
+      height="100px"
+      onmouseover="changeImg(this)"
+    />
+    <img
+      src="../img/bg6.jpg"
+      alt=""
+      id="img3"
+      width="150"
+      height="100px"
+      onmouseover="changeImg(this)"
+    />
+    <img
+      src="../img/bg9.jpg"
+      alt=""
+      id="img4"
+      width="150"
+      height="100px"
+      onmouseover="changeImg(this)"
+    />
+
+    <script>
+      function changeImg(pic) {
+        var x = document.getElementById("bigImg").src;
+        document.getElementById("bigImg").src = pic.src;
+        document.getElementById(pic.id).src = x;
+      }
+    </script>
+  </body>
+</html>
