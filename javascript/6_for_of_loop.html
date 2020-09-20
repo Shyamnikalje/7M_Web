@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var Snames = ["Alok", "Alia", "sai", "ram", "kishan"];
+      document.write("Student Names: " + Snames);
+      document.write("<hr>");
+      var len = Snames.length;
+      document.write("Student Names:");
+      for (var i = 0; i < len; i++) {
+        document.write("<br>");
+        document.write(Snames[i]);
+      }
+      document.write("<hr>");
+      document.write("Student names : using for of loop");
+      for (var j of Snames) {
+        console.log("TCL: j", j);
+
+        document.write("<br>" + j);
+      }
+    </script>
+  </body>
+</html>

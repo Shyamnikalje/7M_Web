@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Sinfo=  
+        {
+            Sname:"Som",
+            age: 26,
+            city:"pune",
+            marks:"90%",
+            Subjects:["Physics","Chemistry"," Biology"]
+        }
+        for(var i in Sinfo)
+        {
+            console.log("data In Sinfo:",i);
+            document.write("<br>");
+            document.write(Sinfo[i]);
+        }
+
+        document.write("<hr>");
+        for(var j in Sinfo)
+        {
+            console.log(Array.isArray(Sinfo[j]));
+            if(Array.isArray(Sinfo[j]))
+            {
+                for(var k of Sinfo[j])
+                {
+                document.write("<br>values of array :"+ k);
+                }
+            }
+            else
+            {
+                document.write("<br>"+Sinfo[j]);
+            }
+        }
+    </script>
+</body>
+</html>

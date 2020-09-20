@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Sdata={
+            Name:"Rushi",
+            Age: 20,
+            Subject:["Phy","Chem","Maths","Bio"],
+            College:"Fergusson college",
+            Marks:"90%",
+            Address:{
+                Society:"Swastik hou. soc C11",
+                House_no:602,
+                village:"chikhali",
+                city:"Pune",
+                State:"Maharashtra"
+                }
+        }
+        for(var a in Sdata)
+        {
+            document
+            console.log(Array.isArray(Sdata[a]));
+            if(Array.isArray(Sdata[a]))
+            {
+                document.write("<br>");
+                for(var b of Sdata[a])
+                {
+                    console.log("values in array",b);
+                    document.write( b + "<br>");
+                }
+                for(var j in Sdata.Address)
+                {
+                    console.log("<br>values of address object:",j);
+                    document.write("<br>"+Sdata.Address[j]);
+                }
+            }
+            else 
+                {
+                document.write("<br>" +Sdata[a]);
+                }
+                // for(var j in Sdata.Address)
+                // {
+                //     console.log("<br>values of address object:",j);
+                //     document.write("<br>"+Sdata.Address[j]);
+                // }
+        }
+        // for(var j in Sdata.Address)
+        //         {
+        //             console.log("<br>values of address object:",j);
+        //             document.write("<br>"+Sdata.Address[j]);
+        //         }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .alert
+        {
+            position: absolute;
+            top : 500px;
+            right:35%
+        }
+    </style>
+
+</head>
+<body>
+    <script>
+    var confirm = confirm("Do you wanna close file...?");
+    console.log(confirm);
+        if(confirm == true)
+        {
+            document.write("file colsed");
+            alert("file colsed");
+        }
+        else
+        {
+            document.write("File not closed");
+            alert("file not closed");
+        }
+    
+    </script>
+
+</body>
+</html>
